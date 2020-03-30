@@ -20,7 +20,7 @@ Executar a classe 'CarrinhoDeCompraApplication' informando como argumento o nave
 - ./gradlew run --args='firefox'
 
 ### Execução pelo jar
-#####Pré-condição: Java 8 ou superior 
+##### Pré-condição: Java 8 ou superior 
 Gere o jar do projeto com o comando abaixo, o jar será gerado na pasta build/libs e mova-o para a pasta raiz:
 - ./gradlew clean build -x test
 Executar o comando abaixo na pasta raiz:
