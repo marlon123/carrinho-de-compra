@@ -12,8 +12,10 @@ public class DriverFactory {
     public static WebDriver getDriver(String navegador){
         if(driver == null) {
             if (navegador.equalsIgnoreCase("firefox")){
+                System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
                 driver = new FirefoxDriver();
             }else if(navegador.equalsIgnoreCase("chrome")){
+                System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
                 driver = new ChromeDriver();
             }
             driver.manage().window().maximize();

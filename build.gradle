@@ -6,6 +6,10 @@ plugins {
 	id "io.franzbecker.gradle-lombok" version "3.3.0"
 }
 
+application{
+	mainClassName = 'com.desafio.carrinhodecompra.CarrinhoDeCompraApplication'
+}
+
 repositories {
 	mavenCentral()
 }
@@ -13,7 +17,6 @@ repositories {
 group = 'com.desafio'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
-mainClassName = 'CarrinhoDeCompraApplication'
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
