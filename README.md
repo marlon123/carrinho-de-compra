@@ -3,7 +3,7 @@
 ## Ferramentas utilizadas
 ### IDE: IntelliJ Community
 ### Gradle
-### Selenium + Java utilizando SpringBoot
+### Selenium + Java utilizando SpringBoot + Lombok
 
 ## Execução do Projeto
 ### Drivers
