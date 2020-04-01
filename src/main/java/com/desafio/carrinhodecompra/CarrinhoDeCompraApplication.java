@@ -21,15 +21,18 @@ public class CarrinhoDeCompraApplication {
 
 	public static void main(String[] args) {
 		log.info("***Iniciando Testes at {}***", LocalDateTime.now());
+
 		String navegador = "";
+		String sistema_operacional = "";
 		try{
-			if (Objects.isNull(args) || args.length == 0) {
-				mapInfo.put("Mensagem", "Nenhum parametro informado");
-				throw new Exception("Nenhum parametro informado");
+			if (Objects.isNull(args) || args.length < 2) {
+				mapInfo.put("Mensagem", "Faltando parâmetro");
+				throw new Exception("Faltando parâmetro");
 			}
 			navegador = args[0].trim();
+			sistema_operacional = args[1].trim();
 
-			setup(navegador);
+			setup(navegador, sistema_operacional);
 			executarCenarioDeTestePrincipal();
 			executarCenarioDeTesteAlternativo();
 			tearDown();
@@ -38,9 +41,9 @@ public class CarrinhoDeCompraApplication {
 		}
 	}
 
-	private static void setup(String navegador){
+	private static void setup(String navegador, String sistema_operacional){
 		log.info("***Configurando WebDriver!***");
-		DriverFactory.getDriver(navegador);
+		DriverFactory.getDriver(navegador, sistema_operacional);
 	}
 
 	private static void tearDown(){
